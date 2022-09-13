@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-CU16-GDR1-ubuntu-20.04
+    container_name: db
+    volumes:
+      - type: volume
+        source: db-data
+        target: /var/opt/mssql
+    environment:
+      ACCEPT_EULA: y
+      SA_PASSWORD: KfAnJ7lWsi5c
+      MSSQL_PID: Developer
+    ports:
+      - "1433:1433"
+volumes:
+  db-data:

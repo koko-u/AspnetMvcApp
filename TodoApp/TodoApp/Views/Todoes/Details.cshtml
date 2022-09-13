@@ -1,0 +1,49 @@
+﻿@model TodoApp.Models.Requests.TodoData
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/_BaseLayoutPage.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Todo</h4>
+    <hr />
+    <div class="row align-items-start mb-3">
+        <div class="col-md-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Summary)
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Summary)
+        </div>
+    </div>
+    <div class="row align-items-start mb-3">
+        <div class="col-md-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Detail)
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Detail)
+        </div>
+    </div>
+    <div class="row align-items-start mb-3">
+        <div class="col-md-2 fw-bold">
+            @Html.DisplayNameFor(model => model.DeadLine)
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.DeadLine)
+        </div>
+    </div>
+    <div class="row align-items-start mb-3">
+        <div class="col-md-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Done)
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Done)
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
